@@ -3,7 +3,7 @@ Django backend containing APIs to authenticate a user through CRUD operations on
 
 I recommend using *Postman* to test this system. The HTML files in the 'templates' folder can be used to visualize the APIs' responses by uncommenting the "VISUALS" sections in the views.py code.
 
-#### Installation:
+## Installation:
 Requires [Python 3](https://www.python.org/downloads/)
 
 Clone directory to your computer and open your terminal in this directory.
