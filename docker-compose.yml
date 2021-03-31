@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: #NOTE: DON'T LISTEN TO DIFFERENT CONTAINERS ON SAME localhost PORT
+      - 8000:8000 #localhost: docker contianer
+    volumes:
+      - .:/authentication #everytime we change files in this directory, it will change it in the docker app, and vice versa

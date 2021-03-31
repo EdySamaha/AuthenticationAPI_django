@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>add</title>
+</head>
+<body>
+<h2> add user </h2>
+
+<h2>Current Users:</h2>
+{%  for user in users  %} <!--From database (models.py)-->
+    <p>  {{  user.user_id  }} {{  user.username  }} {{  user.email  }} {{  user.password  }}  </p> <!--spaces are considered outside {}-->
+{%  endfor  %}
+<br>
+
+<h2>Register:</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form  }} <!--From froms.py (rendered in views.py)-->
+    <button type="submit">Submit</button>
+</form>
+
+<a href="/">Home</a>
+</body>
+</html>
