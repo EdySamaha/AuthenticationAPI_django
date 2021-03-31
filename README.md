@@ -32,7 +32,7 @@ Send requests to the following APIs:
 - `/delete/id` Delete user with specific id (Note: this needs to be more secure)
 
 Account model attributes:
-```json
+```
 {'user_id', 'username', 'email', 'password'}
 ```
 #### NOTE: if you are receiving this data, you must decode JWToken before being able to read these attributes. You should use the `decodeJWT` function defined in views.py
