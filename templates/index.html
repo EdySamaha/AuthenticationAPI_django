@@ -8,10 +8,13 @@
 <body>
 <h2>Welcome</h2>
 
-<p><a href="/register">Add User</a></p> 
-<p><a href="/login">Logedin</a></p>
+{% if isloggedin == 0 %}
+<p><a href="/register">Signup</a></p> 
+<p><a href="/login">Login</a></p>
+{% else %}
+<p><a href="/logout">Logout</a></p> 
+{% endif %}
 
-
-
+<p>{{error}}</p>
 </body>
 </html>

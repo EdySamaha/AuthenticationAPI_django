@@ -1,7 +1,7 @@
 # Authentication API for Django-based websites
 Django backend containing APIs to authenticate a user through CRUD operations on the 'Account' database. **Also supports password hashing and JWT tokens.**
 
-I recommend using *Postman* to test this system. The HTML files in the 'templates' folder can be used to visualize the APIs' responses by uncommenting the "VISUALS" sections in the views.py code.
+You can test this system using *Postman*, or the user interface implemented through HTML files in the 'templates' folder to visualize the APIs' responses 
 
 ## Installation:
 Requires [Python 3](https://www.python.org/downloads/)
@@ -23,13 +23,15 @@ In the project directory run the following in order:
 
 ## Usage:
 Send requests to the following APIs:
-- `/register` create user
-- `/login` login user
-- `/logout/id` logout user with specific id
-- `/getuser/id` returns user with specific id
-- `/getall` returns all users
-- `/update/id` Update user data
-- `/delete/id` Delete user with specific id (Note: this needs to be more secure)
+- `/api-register` create user
+- `/api-login` login user
+Must be authenticated (i.e. registered or loggedin):
+- `/logout` logout user by deleting saved token
+- `/api-update` Update user data with id taken from session token variable
+- `/api-delete` Delete user with with id taken from session token variable
+FOR DEVS ONLY:
+- `/api-getuser/id` returns user with specific id
+- `/api-getall` returns all users
 
 Account model attributes:
 ```

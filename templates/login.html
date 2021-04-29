@@ -2,25 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Loggedin</title>
+  <title>Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head><body>
-    <form action="" method="post">
+</head>
+  
+<body>
+<form method="POST" class="row g-3" style="padding-left: 4%; max-width: 600px;">
   {% csrf_token %}
-  <table>
-  {{form}}
-  </table>
-   
-  <input type="submit" value="find" /> </form>
-    <table>
-    <tr>
-       <p>  {{  user.user_id  }} {{  user.username  }} {{  user.email  }} {{  user.password  }}   </p>
-    </tr>
-  </table>
+  
+  {{ form  }} <!--From froms.py (rendered in views.py)-->
+  <div style="display: flex; justify-content: space-between; margin-left: -1%;  margin-bottom: 3%;">
+      <button class="btn btn-primary" style="width: 100px;" type="submit">
+          Login
+      </button>
+      <!-- <a class="btn btn-danger" style="" href="/delete/">Delete Account</a> -->
+  </div>
+</form>
 
 <a href="/">Home</a>
-  </body>
-  </html>
-
-
-
+</body>
+</html>
